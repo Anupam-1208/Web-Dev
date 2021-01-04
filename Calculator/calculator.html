@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Castoro&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            /* background-color: #8e9afc;
+            /* background-image: linear-gradient(62deg, #8e9afc 0%, #c3ddfc 100%); */ */
+            /* background-image: linear-gradient( 359deg,  rgb(250, 176, 225) -17.7%, rgb(245, 200, 228) 101.5% ); */
+            background: rgb(229, 247, 255);
+            /* background: rgb(248, 214, 243); */
+            font-family: 'Castoro', serif;
+            font-size: x-large;
+            /* background-color: #4158D0; */
+            /* background: linear-gradient(#00AAFF, #00FF6C); */
+            background-size: cover;
+            /* border: 2px solid; */
+            height: 100vh;
+            /* background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%); */
+
+
+        }
+        .container{
+            background-color: rgb(220, 250, 255);
+            /* background-color: rgb(250, 220, 247); */
+            width: 400px;
+            height: 650px;
+            border-radius: 10px;
+            box-shadow: 1px 1px 15px black;
+            margin: 100px auto;
+        }
+        .calculator{
+            /* border: 2px solid; */
+            width: 400px;
+            height: 650px;
+            margin: 100px auto;
+            /* border-radius: 10px; */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .output{
+            /* border: 2px white solid; */
+            /* font: 'Castoro'; */
+            height: 150px;
+            background: rgb(45, 43, 80);
+            /* background: rgb(155, 57, 117); */
+            width: 100%;
+            display: flex;
+            padding: 10px;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: flex-end;
+            border-radius: 10px 10px 0px 0px;
+            color: white;
+            word-wrap: break-word;
+            word-break: break-all;
+        }
+        .output .prev-operand{
+            /* color: black; */
+            /* font-weight: lighter; */
+            color: rgb(231, 231, 231);
+        }
+        .output .current-operand{
+            font-size: 2.5rem;
+            /* text-overflow:ellipsis; */
+            /* display: flex; */
+            /* flex-wrap: wrap; */
+            /* justify-content: end; */
+            /* word-wrap:break-word; */
+        }
+        /* .output */
+        .but{
+            height: 98px ;
+            width: 98px;
+            /* border: 2px solid red; */
+            outline: none;
+            margin: 1px;
+            border: none;
+            /* background: rgb(231, 149, 220); */
+            background: rgb(149, 198, 231);
+            border-radius: 10px;
+            /* font-weight: */
+            display: grid;
+            font-size: xx-large;
+            place-items: center;
+            transition-duration: 0.1s ;
+            cursor: pointer;
+        }
+        .but:hover{
+            /* background: rgb(201, 72, 179); */
+            background: rgb(79, 153, 238);
+            transform: scale(1.001);
+            box-shadow: 1px 1px 5px black;
+        } 
+        .big{
+            width: 198px;
+        }
+
+        
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+                <div class="output">
+                    <div data-prev-operand class="prev-operand"></div>
+                    <div data-current-operand class="current-operand"></div>
+                </div>
+                <!-- data attribute to select in js -->
+                <button class="but big" id="ac" data-all-clear>AC</button>
+                <button class="but" id="del" data-delete>DEL</button>
+                <button class="but" id="divide" data-operation>&div;</button>
+                <button class="but" data-number>1</button>
+                <button class="but" data-number>2</button>
+                <button class="but" data-number>3</button>
+                <button class="but" data-operation>*</button>
+                <button class="but" data-number>4</button>
+                <button class="but" data-number>5</button>
+                <button class="but" data-number>6</button>
+                <button class="but" data-operation>+</button>
+                <button class="but" data-number>7</button>
+                <button class="but" data-number>8</button>
+                <button class="but" data-number>9</button>
+                <button class="but" data-operation>-</button>
+                <button class="but" data-number>.</button>
+                <button class="but" data-number>0</button>
+                <button class="but big" data-equals>=</button>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
