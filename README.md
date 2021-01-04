@@ -1,2 +1,3 @@
-# Web-Dev
-My projects on frontend and backend Web Development
+#Calculator
+This is a simple calculator using HTML,CSS and JavaScript
+
