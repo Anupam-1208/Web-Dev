@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+<style>
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+
+    }
+    body{
+        background: linear-gradient(90deg, rgb(186, 206, 214),rgb(56, 122, 153));
+        color: rgb(68, 69, 70);
+        font-family: 'Poppins', sans-serif;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        grid-template-areas: 
+        'header'
+        'form'
+        'list';
+        grid-template-rows: 100px 300px minmax(200px,max-content);
+    }
+    header{
+        font-size: 1.4rem;
+        grid-area: 'header';
+    }
+    form{
+        background-color: white;
+        box-shadow: 1px 1px 15px rgb(88, 88, 88);
+        grid-area: 'form';
+    }
+
+    form input,form button{
+        outline: none;
+        border: none;
+        padding:  0.6rem;
+        font-size: 2rem;
+        background-color: white;
+       
+    }
+
+    form button{
+        color: rgb(68, 69, 71);
+        background: white;
+        transition: all 0.3s ease;
+    }
+    form button:hover{
+        color: rgb(166, 168, 172);
+    }
+    .todo-container{
+        /* background: white; */
+        width: 50%;
+        grid-area: 'list';
+    }
+    .todo-list{
+        list-style: none;
+
+    }
+    .todo{
+        background: white;
+        margin: 4px;
+        display: grid;
+        /* columns:  */
+        grid-template-columns: 5fr 0.5fr 0.5fr;
+        transition: all 0.4s ease-in;
+    }
+    .todo li{
+        /* background: white; */
+
+    }
+    .todo-item{
+        /* background: white; */
+        display: inline-block;
+        margin: 10px;
+    }
+    .complete-btn{
+        margin: 5px;
+        background: white;
+        color: red;
+        border: none;
+        cursor: pointer;
+        background-color: wheat;
+        width: 40px;
+        
+
+    }
+    .complete-btn:hover{
+        background-color: red;
+        color: rgb(255, 255, 255);
+    }
+    .fa-trash, .fa-check{
+        pointer-events: none;
+    }
+    .completed{
+        text-decoration: line-through;
+        opacity: .50;
+    }
+
+</style>
+</head>
+<body>
+    <header> 
+        <h1>Todo List</h1>
+    </header>
+    <form>
+        <input type="text" class="todo-input">
+        <button class="todo-button" type="submit">
+            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+        </button>
+    </form>
+    <div class="todo-container">
+        <ul class="todo-list">
+            <!-- <div class="todo"></div>
+                <li class="todo-item">yo</li>
+                <button class="complete-btn"></button>
+                <button class="complete-btn"></button>
+            </div> -->
+        </ul>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
